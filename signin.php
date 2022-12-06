@@ -9,24 +9,24 @@ include('Auth/auth.php');
 //instead of using "die", return a message that can be printed in the HTML page
 if (count($_POST) > 0) {
   // 1. check if email and password have been submitted
+  if (!isset($_POST['email'])) die('please enter your email');
+  if (!isset($_POST['password'])) die('please enter your email');
   // 2. check if the email is well formatted
+  if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) die('Your email is invalid');
   // 3. check if the password is well formatted
+  if (strlen($_POST['password']) < 8) die('Please enter a password >=8 characters');
   // 4. check if the file containing banned users exists
+
   // 5. check if the email has been banned
+
   // 6. check if the file containing users exists
+
   // 7. check if the email is registered
   // 8. check if the password is correct
   // 9. store session information
   // 10. redirect the user to the members_page.php page
 
   signin();
-  /*
-	echo 'check email+password';
-	if(true){
-		$_SESSION['logged']=true;
-		
-	}else $_SESSION['logged']=false;
-	*/
 }
 ?>
 
