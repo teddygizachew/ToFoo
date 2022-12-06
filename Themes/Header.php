@@ -7,7 +7,7 @@
 <!-- function to check if user is logged in here-->
 
 <!--logged in user view-->
-    <title>Tofoo Food Delivery</title>
+    <!-- <title>Tofoo Food Delivery</title>
 
     <nav class="navbar navbar-expand-lg" style="background-color:lightcoral">
       <div class="container-fluid">
@@ -36,11 +36,11 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
 <!--Visitor view-->
 
-<!--
+
 <nav class="navbar navbar-expand-lg" style="background-color:lightcoral">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><h2>ToFoo</h2></a>
@@ -50,16 +50,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#"><h3>Login<h3></a>
+          <a class="nav-link" aria-current="page" href="signin.php"><h3>Login<h3></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><h3>Signup<h3></a>
+          <a class="nav-link" href="signup.php"><h3>Signup<h3></a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
--->
+
 
 <!-- Admin view -->
 <!--
