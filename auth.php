@@ -1,11 +1,10 @@
 <?php
+error_reporting(E_ALL);
 
 function signup()
 {
 	if (count($_POST) > 0) {
-		$fh = fopen('../data/users.csv', 'a+');
-		print_r($_POST['email']);
-		print_r($_POST['password']);
+		$fh = fopen('data/users.csv', 'a+');
 		
 		fputs($fh, $_POST['email'] . ';' . password_hash($_POST['password'], PASSWORD_DEFAULT) . PHP_EOL);
 		fclose($fh);
