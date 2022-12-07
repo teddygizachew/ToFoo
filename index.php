@@ -15,9 +15,9 @@ require_once('Themes/Body.php');
 		<div class="card">
  			<img class="card-img-top" src="#" alt="Card image">
   				<div class="card-body">
-    				<h5 class="card-title"><?= $restaurant['Name'] ?></h5>
-    				<p class="card-text">Location: <?=$restaurant['Street1'].', '.$restaurant['Street2'].', '.$restaurant["City"]?></p>
-    				<a href="detail.php?id=<?= $restaurant['ID']  ?>" style="background-color:lightcoral" class="btn btn-outline-light">View</a>
+    				<h5 class="card-title"><?= $restaurant['name'] ?></h5>
+    				<p class="card-text">Location: <?=$restaurant['street1'].', '.$restaurant['street2'].', '.$restaurant["city"]?></p>
+    				<a href="detail.php?restaurant_id=<?= $restaurant['ID']  ?>" style="background-color:lightcoral" class="btn btn-outline-light">View</a>
   				</div>
 		</div>
 	</div>
