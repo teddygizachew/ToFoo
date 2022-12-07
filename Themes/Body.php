@@ -1,2 +1,1 @@
-<body class=".bg-secondary.bg-gradient">
-    test text
+<body style="background-color:#feebf8">

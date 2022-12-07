@@ -1,8 +1,6 @@
 </body>
-<?php
-    require_once("Themes/Settings.php")
-?>
-<footer class="fixed-bottom" style="background-color:lightcoral">
+
+<footer style="background-color:lightcoral">
 <div class="container text-center" style="background-color:lightcoral">
   <div class="row">
     <div class="col">
