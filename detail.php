@@ -1,7 +1,6 @@
 <?php
-session_start();
-require_once('Themes/Header.php');
 require_once('settings.php');
+require_once('Themes/Header.php');
 require_once('Themes/Body.php');
 $result=$connection->query('SELECT *
 FROM item 
@@ -18,14 +17,38 @@ WHERE item.restaurantID =  '.$_GET['restaurant_id']);
   				<div class="card-body">
     				<h5 class="card-title"><?= $item['name'] ?></h5>
                     <p class="card-text"><?= $item['description']?></p>
-                    <p class="card-text"><?= $item['price']?></p>
-    				<a href="detail.php?Item_ID=<?= $item['ID']  ?>" style="background-color:lightcoral" class="btn btn-outline-light">Add</a>
+                    <p class="card-text">$<?= $item['price']?></p>   
+                        <div class="col-md-4">
+                            <label class="form-label">Quantity</label>
+                            <select id="item_amount" class="form-select">
+                                <option selected>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
   				</div>
 		</div>
 	</div>
 <?php
 }
+//checking connection
+if($connection == false){
+    die("Error: Could Not Connect");
+}
+
+$item_amount = $_REQUEST['//sending it somewhere(KART?)'];
+$connection="INSERT INTO _______ VALUES('_____')";
 ?>
+    </div>
+</div>
+<div class="container py-5">
+    <div class="d-grid gap-2">
+        <button class="btn btn-success" type="submit">Add To Cart</button>
+        <button class="btn btn-danger">Cancel Order</button>
     </div>
 </div>
 <?php

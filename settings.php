@@ -2,7 +2,7 @@
 //settings.php
 
 $host='127.0.0.1';				
-$db='ToFoo';					
+$db='ToFoo3';					
 $user='root';					
 $pass='';						
 $port=3306;
@@ -16,3 +16,4 @@ $options=[
 
 // Specify connection
 $connection=new \PDO("mysql:host=$host;dbname=$db;charset=$charset;port=$port",$user,$pass, $options);
+if(session_status()!=PHP_SESSION_ACTIVE) session_start();
