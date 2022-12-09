@@ -1,6 +1,7 @@
 <?php
-require_once('settings.php');
+session_start();
 require_once('Themes/Header.php');
+require_once('Settings.php');
 require_once('Themes/Body.php');
 $result=$connection->query('SELECT *
 FROM item 
@@ -35,13 +36,6 @@ WHERE item.restaurantID =  '.$_GET['restaurant_id']);
 	</div>
 <?php
 }
-//checking connection
-if($connection == false){
-    die("Error: Could Not Connect");
-}
-
-$item_amount = $_REQUEST['//sending it somewhere(KART?)'];
-$connection="INSERT INTO _______ VALUES('_____')";
 ?>
     </div>
 </div>
