@@ -1,0 +1,63 @@
+.scrollbar {
+	overflow-x: a;
+	white-space: nowrap;
+
+	scroll-snap-type: x;
+	margin-left: 64px;
+	margin-right: 64px;
+
+	overflow: auto hidden;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+
+	max-width: 100%;
+}
+
+ul {
+	align-items: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 10px;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit; /* no underline */
+}
+
+a:hover {
+	color: lightcoral;
+}
+
+.name {
+	font-size: 16px;
+}
+
+.birthdate {
+	font-size: 16px;
+}
+
+.btn-category {
+	background-color: white;
+	color: black;
+	border: 2px solid #e7e7e7;
+	/* border-radius: 50% 20% / 10% 40%; */
+	border-radius: 10px 100px / 120px;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.btn-category:hover {
+	background-color: #e7e7e7;
+}
