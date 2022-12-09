@@ -47,7 +47,6 @@ require_once('Themes/Body.php');
 						<div class="card-body">
 							<h5 class="card-title"><?= $restaurant['name'] ?></h5>
 							<p class="card-text">Location: <?= $restaurant['street1'] . ', ' . $restaurant['street2'] . ', ' . $restaurant["city"] ?></p>
-							<p>Category: <?= $restaurant['categoryID'] ?></p>
 							<a href="detail.php?restaurant_id=<?= $restaurant['ID']  ?>" style="background-color:lightcoral" class="btn btn-outline-light">View</a>
 						</div>
 					</div>
