@@ -1,7 +1,7 @@
 <?php
 //This loads the required bootstrap styles, html header, and required meta tags
 // makes the code feel cleaner
-require_once("Themes/Settings.php");
+require_once("Settings.php");
 ?>
 <!--Header Theme -->
 <!-- function to check if user is logged in here-->

@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('Themes/Header.php');
-require_once('settings.php');
+require_once('Settings.php');
 require_once('Themes/Body.php');
 $result=$connection->query('SELECT *
 FROM item 
