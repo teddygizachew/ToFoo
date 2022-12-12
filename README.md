@@ -30,11 +30,11 @@ To get to the menu of a particular website, the user clicks the view button on t
 |<img width="793" alt="image" src="https://user-images.githubusercontent.com/60460297/206958880-fe9ac3c6-acc0-4042-9082-d2cd0f69aeb7.png">|<img width="936" alt="image" src="https://user-images.githubusercontent.com/60460297/206958914-8e1363b0-d928-4511-9dac-27cdcecf9735.png">|
 
 ## User Profile page
-
+|Visitor|Admin View|
 |--|--|
-|<img width="456" alt="Screen Shot 2022-12-11 at 10 59 03 PM" src="https://user-images.githubusercontent.com/60460297/206957579-2d17c1c1-a90a-4c83-912b-4d48bf2263b1.png">|<img width="504" alt="image" src="https://user-images.githubusercontent.com/60460297/206958815-9a3bb0b8-fcb2-4410-a1d6-88954a793718.png">|
-A unique profile page for each user that displays the user’s name, email, address, phone, and saved payments.
+|<img width="383" alt="Screen Shot 2022-12-11 at 11 16 05 PM" src="https://user-images.githubusercontent.com/60460297/206959493-5d947689-07ba-4779-a3f7-40d1e05cf3ac.png">|<img width="383" alt="image" src="https://user-images.githubusercontent.com/60460297/206959374-0ab8a40e-1fc0-4a0c-876b-b259f7c08c2c.png">|
 
+A unique profile page for each user that displays the user’s name, email, address, phone, and saved payments.
 
 ## Address Page
 
