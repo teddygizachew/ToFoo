@@ -31,13 +31,10 @@ To get to the menu of a particular website, the user clicks the view button on t
 
 ## User Profile page
 
+|--|--|
+|<img width="456" alt="Screen Shot 2022-12-11 at 10 59 03 PM" src="https://user-images.githubusercontent.com/60460297/206957579-2d17c1c1-a90a-4c83-912b-4d48bf2263b1.png">|<img width="504" alt="image" src="https://user-images.githubusercontent.com/60460297/206958815-9a3bb0b8-fcb2-4410-a1d6-88954a793718.png">|
 A unique profile page for each user that displays the user’s name, email, address, phone, and saved payments.
 
-<img width="456" alt="Screen Shot 2022-12-11 at 10 59 03 PM" src="https://user-images.githubusercontent.com/60460297/206957579-2d17c1c1-a90a-4c83-912b-4d48bf2263b1.png">
-
-## Admin Profile page
-
-<img width="504" alt="image" src="https://user-images.githubusercontent.com/60460297/206958815-9a3bb0b8-fcb2-4410-a1d6-88954a793718.png">
 
 ## Address Page
 
