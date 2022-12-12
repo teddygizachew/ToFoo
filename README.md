@@ -23,6 +23,12 @@ To get to the menu of a particular website, the user clicks the view button on t
 
 <img width="360" alt="image" src="https://user-images.githubusercontent.com/60460297/206956587-282d389e-b185-4b9f-9854-25b2d7dbb974.png">
 
+## User Authentication Page
+
+| Signup Page | Sign in Page |
+|--|--|
+|<img width="793" alt="image" src="https://user-images.githubusercontent.com/60460297/206958880-fe9ac3c6-acc0-4042-9082-d2cd0f69aeb7.png">|<img width="936" alt="image" src="https://user-images.githubusercontent.com/60460297/206958914-8e1363b0-d928-4511-9dac-27cdcecf9735.png">|
+
 ## User Profile page
 
 A unique profile page for each user that displays the user’s name, email, address, phone, and saved payments.
@@ -31,10 +37,11 @@ A unique profile page for each user that displays the user’s name, email, addr
 
 ## Admin Profile page
 
+<img width="504" alt="image" src="https://user-images.githubusercontent.com/60460297/206958815-9a3bb0b8-fcb2-4410-a1d6-88954a793718.png">
+
 ## Address Page
 
 <img width="533" alt="image" src="https://user-images.githubusercontent.com/60460297/206958460-bcfd9077-84f7-47d7-a106-499f24d3b88a.png">
-
 
 ## Payment Page
 
