@@ -5,10 +5,9 @@ require_once('../Classes/PaymentClass.php');
 require_once('../Classes/UserClass.php');
 require_once('../Classes/AddressClass.php');
 
-
-session_start();
-
 $user = User::getUser($connection);
+
+$result = User::getAllUsers($connection);
 
 $payment = Payment::getPayment($connection, $_SESSION['id']);
 
@@ -77,13 +76,13 @@ background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238
                 </div>
               </div>
 
-              <p class="lead fw-normal mb-1">Payment Info</p>
               <?php
               if ($payment == false) {
               ?>
               <?php
               } else {
               ?>
+                <p class="lead fw-normal mb-1">Payment Info</p>
                 <div class="p-4" style="background-color: #f8f9fa;">
                   <div class="row d-flex justify-content-center">
                     <div class="card rounded-3">
@@ -103,22 +102,66 @@ background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238
                   </div>
                 </div>
               <?php } ?>
-              <div class="p-4" style="background-color: #f8f9fa;">
-                <div class="row">
-                  <div class="card mb-4">
-                    <div class="card-body text-center">
-                      <div class="d-flex justify-content-center mb-2">
-                        <a href="payment.php">
-                          <button type="button" class="btn btn-outline-primary ms-1">Add Payment</button>
-                        </a>
-                        <a href="address.php">
-                          <button type="button" class="btn btn-outline-primary ms-1">Add Address</button>
-                        </a>
+              <?php
+              if ($user['email'] != "admin@tofoo.com") {
+              ?>
+                <div class="p-4" style="background-color: #f8f9fa;">
+                  <div class="row">
+                    <div class="card mb-4">
+                      <div class="card-body text-center">
+                        <div class="d-flex justify-content-center mb-2">
+                          <a href="payment.php">
+                            <button type="button" class="btn btn-outline-primary ms-1">Add Payment</button>
+                          </a>
+                          <a href="address.php">
+                            <button type="button" class="btn btn-outline-primary ms-1">Add Address</button>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              <?php
+              }
+              ?>
+
+              <?php
+              if ($user['email'] == "admin@tofoo.com") {
+              ?>
+                <p class="lead fw-normal mb-1">Users</p>
+                <div class="p-4" style="background-color: #f8f9fa;">
+                  <div class="row">
+                    <?php
+                    while ($user_item = $result->fetch()) {
+                    ?>
+
+                      <div class="card mb-4">
+                        <div class="card-body text-center">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="ms-3">
+                              <p>FullName: <?= $user_item['firstName'] . ' ' . $user_item['lastName'] ?></p>
+                              <p>Email: <?= $user_item['email'] ?></p>
+
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-center mb-2">
+                            <a href="deleteUser.php?user_ID=<?= $user_item['ID'] ?>">
+                              <button type="button" class="btn btn-outline-danger ms-1">Delete User</button>
+                            </a>
+                            <a href="modifyUser.php?user_ID=<?= $user_item['ID'] ?>">
+                              <button type="button" class="btn btn-outline-warning ms-1">Modify</button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    <?php
+                    }
+                    ?>
+                  </div>
+                </div>
+              <?php
+              }
+              ?>
             </div>
           </div>
         </div>
