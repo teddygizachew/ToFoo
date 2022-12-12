@@ -26,3 +26,19 @@ To get to the menu of a particular website, the user clicks the view button on t
 ## User Profile page
 
 A unique profile page for each user that displays the user’s name, email, address, phone, and saved payments.
+<img width="456" alt="Screen Shot 2022-12-11 at 10 59 03 PM" src="https://user-images.githubusercontent.com/60460297/206957579-2d17c1c1-a90a-4c83-912b-4d48bf2263b1.png">
+
+## Shopping Cart page
+
+Once logged in, the user has the option to view their shopping cart by clicking the “Shopping Cart” button located in the navigation bar.
+
+<img width="1131" alt="image" src="https://user-images.githubusercontent.com/60460297/206957987-2515a39a-6558-4a15-87b2-b0ad3c583aea.png">
+
+## Database Designer View
+
+<img width="414" alt="image" src="https://user-images.githubusercontent.com/60460297/206958121-10f3af65-c8cc-48b3-9dc5-08bbd035c62f.png">
+
+## Setting up the database
+
+When creating the database, use the name “ToFoo.”  Also, verify that the port number in xampp is the same as the variable $port, if not, make sure to change that.
+<img width="222" alt="image" src="https://user-images.githubusercontent.com/60460297/206958152-a87fd59d-2b6d-4232-a3ee-51f687adfd81.png">
