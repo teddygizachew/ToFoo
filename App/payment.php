@@ -12,7 +12,6 @@ if (count($_POST) > 0) {
   $securityCode = trim($_POST['securityCode']);
   $userID = $_SESSION['id'];
 
-  echo $userID;
   Payment::createPayment($connection, $fullName, $cardNum, $expiration, $securityCode, $userID);
 }
 ?>

@@ -13,7 +13,6 @@ class User
 
   static function modifyUser($connection,  $firstName, $lastName, $email, $password, $phone, $role, $userID,)
   {
-    echo "ASasas";
     $query = $connection->prepare('UPDATE user SET firstName = ?, lastName = ?, email = ?, password = ?, phone = ?, role = ? WHERE ID=?');
     $query->execute([$firstName, $lastName, $email, $password, $phone, $role, $userID]);
     header("location: profile.php");

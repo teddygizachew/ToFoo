@@ -4,6 +4,7 @@ require_once('../Settings/Connection.php');
 require_once('../Classes/PaymentClass.php');
 require_once('../Classes/UserClass.php');
 require_once('../Classes/AddressClass.php');
+require_once('../Classes/RestaurantClass.php');
 
 $user = User::getUser($connection);
 
@@ -128,6 +129,21 @@ background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238
               <?php
               if ($user['email'] == "admin@tofoo.com") {
               ?>
+                <p class="lead fw-normal mb-1">Restaurant Portal</p>
+                <div class="p-4" style="background-color: #f8f9fa;">
+                  <div class="row">
+                    <div class="card mb-4">
+                      <div class="card-body text-center">
+                        <div class="d-flex justify-content-center mb-2">
+                          <a href="createRestaurant.php">
+                            <button type="button" class="btn btn-outline-success ms-1">Add Restaurant</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <p class="lead fw-normal mb-1">Users</p>
                 <div class="p-4" style="background-color: #f8f9fa;">
                   <div class="row">

@@ -2,12 +2,15 @@
 require_once('../Home/Header.php');
 require_once('../Settings/Connection.php');
 require_once('../Classes/UserClass.php');
+require_once('../Classes/RestaurantClass.php');
+require_once('../Classes/CategoryClass.php');
+
 
 $user = User::getUser($connection);
 
 // Simple query
-$result = $connection->query('SELECT * FROM restaurant');
-$categories = $connection->query('SELECT * FROM category');
+$result = Restaurant::getRestaurant($connection);
+$categories = Category::getCategory($connection);
 
 ?>
 
