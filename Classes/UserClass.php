@@ -3,6 +3,35 @@
 class User
 {
 
+  static function getUserByID($connection, $userID)
+  {
+    $query = $connection->prepare('SELECT * FROM user WHERE ID=?');
+    $query->execute([$userID]);
+    $user = $query->fetch();
+    return $user;
+  }
+
+  static function modifyUser($connection,  $firstName, $lastName, $email, $password, $phone, $role, $userID,)
+  {
+    echo "ASasas";
+    $query = $connection->prepare('UPDATE user SET firstName = ?, lastName = ?, email = ?, password = ?, phone = ?, role = ? WHERE ID=?');
+    $query->execute([$firstName, $lastName, $email, $password, $phone, $role, $userID]);
+    header("location: profile.php");
+  }
+
+  static function deleteUser($connection, $userID)
+  {
+    $query = $connection->prepare('DELETE FROM user WHERE ID=?');
+    $query->execute([$userID]);
+    header("location: profile.php");
+  }
+
+  static function getAllUsers($connection)
+  {
+    $query = $connection->query('SELECT * FROM user');
+    return $query;
+  }
+
   static function getUser($connection)
   {
     $query = $connection->prepare('SELECT * FROM user WHERE ID=?');
