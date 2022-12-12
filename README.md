@@ -26,7 +26,19 @@ To get to the menu of a particular website, the user clicks the view button on t
 ## User Profile page
 
 A unique profile page for each user that displays the user’s name, email, address, phone, and saved payments.
+
 <img width="456" alt="Screen Shot 2022-12-11 at 10 59 03 PM" src="https://user-images.githubusercontent.com/60460297/206957579-2d17c1c1-a90a-4c83-912b-4d48bf2263b1.png">
+
+## Admin Profile page
+
+## Address Page
+
+<img width="533" alt="image" src="https://user-images.githubusercontent.com/60460297/206958460-bcfd9077-84f7-47d7-a106-499f24d3b88a.png">
+
+
+## Payment Page
+
+<img width="546" alt="image" src="https://user-images.githubusercontent.com/60460297/206958539-7d02d46d-179a-4ec1-acfc-0607e84c1835.png">
 
 ## Shopping Cart page
 
