@@ -8,6 +8,8 @@ $result = Cart::getCart($connection);
 
 $count = Cart::getCartCount($connection);
 $payment = Payment::getPayment($connection, $_SESSION['id']);
+$shipping_cost = 20.00;
+$total = 0;
 
 ?>
 
@@ -30,8 +32,10 @@ $payment = Payment::getPayment($connection, $_SESSION['id']);
                 </div>
                 <?php
                 //Landing-page
+                $total_count = 0;
                 while ($cart = $result->fetch()) {
                   $item = Cart::getItem($connection, $cart['itemID']);
+                  $total_count += $item['price'];
                 ?>
                   <div class="card mb-3 mb-lg-0">
                     <div class="card-body">
@@ -67,65 +71,41 @@ $payment = Payment::getPayment($connection, $_SESSION['id']);
                     </div>
                     <select class="form-select" aria-label="Default select example">
                       <option selected>Select</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <option value="1">
+                        <?= $payment['fullName'] . ' **** ' . $payment['cardNum'] ?>
+                      </option>
                     </select>
                     <hr class="my-4">
 
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                      <h5 class="mb-0">Payment details</h5>
+                      <h5 class="mb-0">Choose Address</h5>
                     </div>
-
-
-                    <form class="mt-4">
-                      <div class="form-outline form-white mb-4">
-                        <input type="text" id="typeName" class="form-control form-control-lg" siez="17" placeholder="Full Name" />
-                        <label class="form-label" for="typeName">Cardholder's Name</label>
-                      </div>
-
-                      <div class="form-outline form-white mb-4">
-                        <input type="text" id="typeText" class="form-control form-control-lg" siez="17" placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
-                        <label class="form-label" for="typeText">Card Number</label>
-                      </div>
-
-                      <div class="row mb-4">
-                        <div class="col-md-6">
-                          <div class="form-outline form-white">
-                            <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YY" size="7" id="exp" minlength="7" maxlength="7" />
-                            <label class="form-label" for="typeExp">Expiration</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-outline form-white">
-                            <input type="password" id="typeText" class="form-control form-control-lg" placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                            <label class="form-label" for="typeText">Cvv</label>
-                          </div>
-                        </div>
-                      </div>
-
-                    </form>
-
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Select</option>
+                      <option value="1">
+                        <?= $payment['fullName'] . ' **** ' . $payment['cardNum'] ?>
+                      </option>
+                    </select>
                     <hr class="my-4">
-
+                    
                     <div class="d-flex justify-content-between">
                       <p class="mb-2">Subtotal</p>
-                      <p class="mb-2">$4798.00</p>
+                      <p class="mb-2">$<?= $total_count ?></p>
                     </div>
 
                     <div class="d-flex justify-content-between">
                       <p class="mb-2">Shipping</p>
-                      <p class="mb-2">$20.00</p>
+                      <p class="mb-2">$<?= $shipping_cost ?></p>
                     </div>
 
                     <div class="d-flex justify-content-between mb-4">
                       <p class="mb-2">Total(Incl. taxes)</p>
-                      <p class="mb-2">$4818.00</p>
+                      <p class="mb-2">$<?= $total_count+ $shipping_cost ?></p>
                     </div>
 
                     <button type="button" class="btn btn-success btn-block btn-lg" style="--mdb-btn-margin-top: 0.5rem;display: block; width: 100%;">
                       <div class="d-flex justify-content-between">
-                        <span>$4818.00</span>
+                        <span>$<?= $total_count + $shipping_cost ?></span>
                         <span>Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
                       </div>
                     </button>
