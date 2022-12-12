@@ -63,4 +63,4 @@ Once logged in, the user has the option to view their shopping cart by clicking 
 
 When creating the database, use the name “ToFoo.”  Also, verify that the port number in xampp is the same as the variable $port, if not, make sure to change that.
 
-<img width="222" alt="image" src="https://user-images.githubusercontent.com/60460297/206958152-a87fd59d-2b6d-4232-a3ee-51f687adfd81.png">
+<img width="434" alt="image" src="https://user-images.githubusercontent.com/60460297/206967152-1b28b936-c0df-40ef-8f99-7ab177710103.png">
