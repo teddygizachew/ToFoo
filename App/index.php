@@ -1,9 +1,9 @@
 <?php
 require_once('../Home/Header.php');
 require_once('../Settings/Connection.php');
+require_once('../Classes/UserClass.php');
 
-
-session_start();
+$user = User::getUser($connection);
 
 // Simple query
 $result = $connection->query('SELECT * FROM restaurant');
@@ -59,6 +59,15 @@ $categories = $connection->query('SELECT * FROM category');
 							if (isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
 							?>
 								<a href="detail.php?restaurant_id=<?= $restaurant['ID']  ?>" style="background-color:lightcoral" class="btn btn-outline-light">View</a>
+							<?php
+							}
+							?>
+
+							<?php
+							if ($user['email'] == "admin@tofoo.com") {
+							?>
+								<a href="deleteRestaurant.php?restaurant_id=<?= $restaurant['ID'] ?>" style="background-color:red" class="btn btn-outline-light">Delete</a>
+								</form>
 							<?php
 							}
 							?>
