@@ -1,2 +1,0 @@
-# ToFoo
-Food Delivery Platform

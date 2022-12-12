@@ -61,3 +61,25 @@ a:hover {
 .btn-category:hover {
 	background-color: #e7e7e7;
 }
+
+/* NavBar */
+
+.navbar {
+	justify-content: space-between !important;
+}
+
+*,
+::after,
+::before {
+	text-decoration: none !important;
+}
+
+
+
+
+
+
+/* sign up */
+
+
+
