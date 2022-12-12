@@ -46,7 +46,6 @@ $categories = $connection->query('SELECT * FROM category');
 			</div>
 		</div>
 		<?php
-		//Landing-page
 		while ($restaurant = $result->fetch()) {
 		?>
 			<div class="col-md-4 cat-block" id="cat-<?= $restaurant['categoryID'] ?>">

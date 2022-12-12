@@ -1,7 +1,8 @@
 <?php
 require_once('../Home/Header.php');
 require_once('../Settings/Connection.php');
-include('Auth.php');
+require_once('../Classes/UserClass.php');
+
 
 session_start();
 
@@ -31,11 +32,10 @@ if (count($_POST) > 0) {
   // encrypt password
   // save the user in the database 
   // show them a success message and redirect them to the sign in page
-  echo "!@!@";
   $email = trim($_POST['email']);
   $password = trim($_POST['password']);
 
-  signin($connection, $email, $password);
+  User::signin($connection, $email, $password);
 }
 ?>
 

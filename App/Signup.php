@@ -1,7 +1,7 @@
 <?php
 require_once('../Home/Header.php');
 require_once('../Settings/Connection.php');
-include('Auth.php');
+require_once('../Classes/UserClass.php');
 
 session_start();
 
@@ -9,32 +9,16 @@ session_start();
 // if the user is alreay signed in, redirect them to the members_page.php page
 if (isset($_SESSION['logged']) && $_SESSION['logged'] == true) header('location: index.php');
 
-// use the following guidelines to create the function in auth.php
-// instead of using "die", return a message that can be printed in the HTML page
 if (count($_POST) > 0) {
-  // check if the email is valid
-  // if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) die('Your email is invalid');
-
-  // check if password length is between 8 and 16 characters
-  // if (strlen($_POST['password']) < 8) die('Please enter a password >=8 characters');
-
-  // check if the password contains at least 2 special characters
-  // check if the file containing banned users exists
-  // check if the email has not been banned
-  // check if the file containing users exists
-  // check if the email is in the database already
-  // encrypt password
-  // save the user in the database 
-  // show them a success message and redirect them to the sign in page
 
   $firstName = trim($_POST['firstName']);
   $lastName = trim($_POST['lastName']);
   $email = trim($_POST['email']);
   $password = trim($_POST['password']);
   $phone = trim($_POST['phone']);
-  $role = 5;
+  $role = 8;
 
-  signup($connection, $firstName, $lastName, $email, $password, $phone, $role);
+  User::signup($connection, $firstName, $lastName, $email, $password, $phone, $role);
 
   header("location: Signin.php");
 }
@@ -103,7 +87,7 @@ if (count($_POST) > 0) {
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input name="phone" type="password" id="form3Example4cd" class="form-control" required />
+                        <input name="phone" type="text" id="form3Example4cd" class="form-control" required />
                         <label class="form-label" for="form3Example4cd">Phone</label>
                       </div>
                     </div>

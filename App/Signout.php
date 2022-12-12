@@ -1,7 +1,5 @@
 <?php
 session_start();
-if (!isset($_SESSION['logged'])) header('location: Signin.php');
+require_once('../Classes/UserClass.php');
 
-unset($_SESSION['logged']);
-session_destroy();
-echo "Logged out!";
+User::signOut();

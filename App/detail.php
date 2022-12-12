@@ -5,6 +5,8 @@ require_once('../Home/Header.php');
 require_once('../Settings/Connection.php');
 
 $result = $connection->query('SELECT * FROM item WHERE item.restaurantID =  ' . $_GET['restaurant_id']);
+
+
 ?>
 <div class="container py-5">
     <div class="row">
