@@ -3,8 +3,6 @@ require_once('../Home/Header.php');
 require_once('../Settings/Connection.php');
 require_once('../Classes/UserClass.php');
 
-session_start();
-
 
 // if the user is alreay signed in, redirect them to the members_page.php page
 if (isset($_SESSION['logged']) && $_SESSION['logged'] == true) header('location: index.php');
@@ -16,7 +14,7 @@ if (count($_POST) > 0) {
   $email = trim($_POST['email']);
   $password = trim($_POST['password']);
   $phone = trim($_POST['phone']);
-  $role = 8;
+  $role = 1;
 
   User::signup($connection, $firstName, $lastName, $email, $password, $phone, $role);
 

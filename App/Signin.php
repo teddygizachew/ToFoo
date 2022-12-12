@@ -4,8 +4,6 @@ require_once('../Settings/Connection.php');
 require_once('../Classes/UserClass.php');
 
 
-session_start();
-
 // If user is already logged, they'll be taken to the private page
 if (isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
   header('location: index.php');

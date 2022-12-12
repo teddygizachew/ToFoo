@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 require_once('../Home/Header.php');
 require_once('../Settings/Connection.php');
